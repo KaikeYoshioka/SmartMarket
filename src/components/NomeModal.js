@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { KeyboardAvoidingView, Modal, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { cores, estilosComuns } from '../theme';
 
-// Modal simples com um campo de texto (Alert.prompt só existe no iOS)
+
 export default function NomeModal({ visivel, titulo, valorInicial = '', onConfirmar, onCancelar }) {
   const [nome, setNome] = useState(valorInicial);
 

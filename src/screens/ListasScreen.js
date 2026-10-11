@@ -12,7 +12,6 @@ export default function ListasScreen({ navigation }) {
   const { user } = useAuth();
   const [listas, setListas] = useState([]);
   const [carregando, setCarregando] = useState(true);
-  // null = modal fechado; { id: null } = nova lista; { id, nome } = renomear
   const [editando, setEditando] = useState(null);
 
   useLayoutEffect(() => {

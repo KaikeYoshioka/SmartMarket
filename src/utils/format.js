@@ -7,7 +7,6 @@ export function formatarMoeda(valor) {
   }
 }
 
-// Aceita "4,99", "4.99" e "1.234,56"; retorna NaN se não for número válido
 export function parseNumero(texto) {
   let limpo = String(texto ?? '').trim().replace(/\s/g, '');
   if (limpo.includes(',')) limpo = limpo.replace(/\./g, '').replace(',', '.');

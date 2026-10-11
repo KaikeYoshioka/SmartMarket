@@ -22,7 +22,6 @@ export default function LoginScreen({ navigation }) {
     setErro('');
     setCarregando(true);
     try {
-      // Ao logar, o AuthContext detecta o usuário e troca para as telas do app
       await signInWithEmailAndPassword(auth, email.trim(), senha);
     } catch (e) {
       setErro(mensagemErroAuth(e));

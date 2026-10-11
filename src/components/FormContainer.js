@@ -1,7 +1,6 @@
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet } from 'react-native';
 import { cores } from '../theme';
 
-// Container dos formulários: sobe o conteúdo quando o teclado abre
 export default function FormContainer({ children, centralizado = false }) {
   return (
     <KeyboardAvoidingView

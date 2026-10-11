@@ -33,7 +33,6 @@ function Rotas() {
     );
   }
 
-  // Com usuário logado mostra as telas do app; senão, as telas de autenticação
   return (
     <Stack.Navigator screenOptions={opcoesHeader}>
       {user ? (

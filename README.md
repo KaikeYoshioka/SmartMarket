@@ -22,7 +22,6 @@ src/services/                  Acesso ao Firestore (listas e produtos)
 src/screens/                   Login, Cadastro, RecuperarSenha, Listas, Produtos, ProdutoForm, Resumo
 src/components/                Componentes reutilizáveis
 src/utils/format.js            Moeda, conversão de números, cálculo dos totais
-firestore.rules                Regras de segurança do Firestore
 ```
 
 Modelo de dados no Firestore:

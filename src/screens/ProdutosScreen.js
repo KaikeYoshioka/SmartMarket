@@ -15,7 +15,6 @@ export default function ProdutosScreen({ navigation, route }) {
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    // onSnapshot mantém a lista (e o total) sincronizados em tempo real com o Firestore
     const unsubscribe = observarProdutos(
       user.uid,
       listaId,
@@ -31,7 +30,6 @@ export default function ProdutosScreen({ navigation, route }) {
     return unsubscribe;
   }, [user.uid, listaId]);
 
-  // Pendentes primeiro, comprados no final (mantendo a ordem de adição)
   const produtosOrdenados = useMemo(
     () => [...produtos].sort((a, b) => Number(a.comprado) - Number(b.comprado)),
     [produtos]
@@ -113,7 +111,6 @@ export default function ProdutosScreen({ navigation, route }) {
   );
 }
 
-// Params de navegação devem ser serializáveis (Timestamp do Firestore não é)
 function serializar({ id, nomeProduto, quantidade, precoUnitario }) {
   return { id, nomeProduto, quantidade, precoUnitario };
 }

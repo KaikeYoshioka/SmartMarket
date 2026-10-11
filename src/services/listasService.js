@@ -31,7 +31,6 @@ export function renomearLista(uid, listaId, nome) {
   return updateDoc(doc(db, 'usuarios', uid, 'listas', listaId), { nome: nome.trim() });
 }
 
-// O Firestore não apaga subcoleções sozinho, então removemos os produtos junto com a lista
 export async function excluirLista(uid, listaId) {
   const listaDoc = doc(db, 'usuarios', uid, 'listas', listaId);
   const produtos = await getDocs(collection(listaDoc, 'produtos'));

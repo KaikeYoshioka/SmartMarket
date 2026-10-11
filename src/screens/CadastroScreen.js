@@ -22,7 +22,7 @@ export default function CadastroScreen() {
     setErro('');
     setCarregando(true);
     try {
-      // Após criar a conta o Firebase já loga o usuário automaticamente
+      
       await createUserWithEmailAndPassword(auth, email.trim(), senha);
     } catch (e) {
       setErro(mensagemErroAuth(e));

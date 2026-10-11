@@ -19,7 +19,6 @@ export function observarProdutos(uid, listaId, onChange, onError) {
   const q = query(produtosRef(uid, listaId), orderBy('dataAdicao', 'asc'));
   return onSnapshot(
     q,
-    // serverTimestamps 'estimate' evita dataAdicao nula enquanto o servidor não confirma a escrita
     (snapshot) =>
       onChange(snapshot.docs.map((d) => ({ id: d.id, ...d.data({ serverTimestamps: 'estimate' }) }))),
     onError
